@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body style="background-image: linear-gradient(135deg, #9164bd 0%, #180172 100%);">
+
+    <section class="min-h-screen flex items-center justify-center">
+        <div class="flex rounded-3xl bg-white shadow-xl/30">
+            <div class="w-3/4 h-120">
+                <img src="/views/images/login_image.webp" alt="" class="w-full h-full rounded-tl-3xl rounded-bl-3xl">
+            </div>
+            <div class="w-2/4 h-120 ">
+                <!-- From -->
+                <div class="form-container">
+                    <div class="logo-container">
+                        <h2 class="font-bold text-2xl">Login</h2>
+                    </div>
+
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                            <br>
+                            <label for="email">Password</label>
+                            <input type="password" id="email" name="email" placeholder="Enter your password" required>
+                        </div>
+                            <br>
+                        <button class="form-submit-btn " type="submit">Login</button>
+                    </form>
+                    
+                    <p class="signup-link">
+                        Don't have an account?
+                        <a href="#" class="signup-link link"> Sign up now</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
