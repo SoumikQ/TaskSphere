@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+</head>
+
+<body class="flex justify-center items-center bg-gray-700">
+    <div class="flex w-screen mt-9 h-screen text-gray-400 bg-gray-900 wid rounded-3xl shadow-xl/40">
+
+        <!-- Component Start -->
+
+        <div class="flex flex-col flex-grow">
+            <div class="flex items-center flex-shrink-0 h-16 px-8 border-b border-gray-800">
+                <img src="/views/images/logo.png" class="h-10" alt="">
+                <h1 class="text-lg font-bold ml-5 text-white">Task Sphere</h1>
+                <button
+                    class="flex items-center justify-center h-10 px-4 ml-auto text-sm font-medium rounded hover:bg-gray-800">
+                    Log out
+                </button>
+            </div>
+
+            <div class="flex-grow p-6 overflow-auto bg-gray-800 rounded-br-3xl rounded-bl-3xl">
+                <div class="grid grid-cols-3 gap-6 h-full">
+                    <div class="col-span-1 bg-gray-700 rounded-3xl flex justify-center">
+
+                        <div class="mt-5">
+                            <h2 class="text-xl text-center text-white"><b>Add / Edit Task</b></h2>
+                            <form id="task-form" class="space-y-4">
+                                <input type="hidden" id="taskId">
+                                <label class="block">Title *</label>
+                                <input id="title" required placeholder="Task title" class="w-full border rounded p-2">
+
+                                <label class="block">Description</label>
+                                <textarea id="description" rows="3" placeholder="Optional details"
+                                    class="w-full border rounded p-2"></textarea>
+
+                                <!-- Date + Priority (same row) -->
+                                <div class="flex gap-4">
+                                    <div class="flex-1">
+                                        <label class="block">Due Date</label>
+                                        <input type="date" id="dueDate" class="w-full border rounded p-2">
+                                    </div>
+                                    <div class="flex-1">
+                                        <label class="block">Priority</label>
+                                        <select id="priority" class="w-full border rounded p-2">
+                                            <option>Low</option>
+                                            <option selected>Medium</option>
+                                            <option>High</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 items-end">
+                                    <div class="flex-1">
+                                        <label class="block">Status</label>
+                                        <select id="status" class="w-full border rounded p-2">
+                                            <option selected>Pending</option>
+                                            <option>Completed</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <button type="submit" id="saveBtn"
+                                            class="bg-blue-600 text-white px-4 py-2 rounded">
+                                            Save Task
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="notice text-sm text-gray-500 mt-2">* required field</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 rounded-3xl justify-center">
+                        <div class="h-30 bg-gray-700 rounded-3xl flex justify-center">
+                            <div class="mt-8">
+                                <h2>Stats</h2>
+                                <div id="stats">Loading…</div>
+                            </div>
+                        </div>
+                        <div class="h-100 mt-5 bg-gray-700 rounded-3xl p-3">
+
+                            <h1 class="text-center text-white"><b>Task List</b></h1>
+                            <table class="table" id="tasks-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Due</th>
+                                        <th>Priority</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tasks-body"></tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Component End  -->
+
+    </div>
+
+<script src="/public/js/dashboard.js"></script>
+</body>
+
+</html>

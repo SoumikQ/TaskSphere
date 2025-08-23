@@ -7,7 +7,7 @@
     <title>Register TaskSphere</title>
     <link rel="stylesheet" href="/public/css/style.css">
 </head>
-<body style="background-image: linear-gradient(135deg, #9164bd 0%, #180172 100%);">
+<body style="background-image: linear-gradient(135deg, #9064bd 0%, #0d0041 100%);">
     
     <section class="min-h-screen flex items-center justify-center">
         <div class="flex rounded-3xl bg-white shadow-xl/40 h-140 w-220">
@@ -20,21 +20,21 @@
 
                     <form class="form">
                         <div class="form-group">
-                            <label for="email">Name</label>
-                            <input type="text" id="email" name="email" placeholder="Enter your name" required>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
                             <label for="email" class="mt-5">Email</label>
                             <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-                            <label for="email" class="mt-5">Password</label>
-                            <input type="password" id="email" name="email" placeholder="Enter your password" required>
+                            <label for="password" class="mt-5">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
                         </div>
                         <button class="form-submit-btn " type="submit">Register</button>
                     </form>
                     
                     <p class="signup-link">
                         Already have an account?
-                        <a href="#" class="signup-link link"> Login now</a>
+                        <a href="/login" class="signup-link link">Login now</a>
                     </p>
                 </div>
             </div>
@@ -44,5 +44,6 @@
         </div>
     </section>
 
+    <script src="/public/js/register.js"></script>
 </body>
 </html>
