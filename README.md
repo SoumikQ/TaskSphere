@@ -28,6 +28,8 @@ It is built using **Node.js, Express.js, MongoDB (Mongoose)** for the backend an
 
 ## 📂 Project Structure
 
+```
+
 tasksphere/
 ├── backend/
 │ ├── server.js
@@ -53,6 +55,7 @@ tasksphere/
 ├── .env.example
 └── README.md
 
+```
 
 ---
 
